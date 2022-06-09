@@ -1,0 +1,52 @@
+[tool.briefcase]
+project_name = "flowhub"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/FlowHub"
+license = "GNU General Public License v3 or later (GPLv3+)"
+author = 'constantini'
+author_email = "crick.lucas@gmail.com"
+
+[tool.briefcase.app.FlowHub]
+formal_name = "flowhub"
+description = "This is my app to all preatty dears"
+icon = "src/FlowHub/resources/FlowHub"
+sources = ['src/FlowHub']
+requires = [
+]
+
+
+[tool.briefcase.app.FlowHub.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev32',
+    'std-nslog==1.0.0'
+]
+
+[tool.briefcase.app.FlowHub.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev32',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.FlowHub.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev32',
+]
+
+# Mobile deployments
+[tool.briefcase.app.FlowHub.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev32',
+    'std-nslog==1.0.0'
+]
+
+[tool.briefcase.app.FlowHub.android]
+requires = [
+    'toga-android>=0.3.0.dev32'
+]
